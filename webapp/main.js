@@ -9,7 +9,7 @@ function submit(){
     console.log(network.value);
 
     if(address.value==null || count.value==null || count.value==undefined || address.value==undefined){
-    message.innerHTML = 'Enter both address and amount'; 
+    message.innerHTML = 'Output = Enter both address and amount'; 
     return
     }
     try {
@@ -18,7 +18,7 @@ function submit(){
         let connection = new Connection(network.value, "confirmed");
 
         if(!connection || connection==null){
-        message.innerHTML = `No Account found with this ${address}` 
+        message.innerHTML = `Output = No Account found with this ${address}` 
         return 
         }
 
@@ -34,15 +34,15 @@ function submit(){
         let response = Promise.resolve(connection.getAccountInfo(publicKey))
         response.then(
             function(value) {
-                message.innerHTML = `You have ${network.options[network.selectedIndex].text} solana count = ${value.lamports/LAMPORTS_PER_SOL}`;
+                message.innerHTML = `Output = You have ${network.options[network.selectedIndex].text} solana count = ${value.lamports/LAMPORTS_PER_SOL}`;
             },
             function(error){
-                message.innerHTML = error.message
+                message.innerHTML = `Output = ${error.message}`
             }
         );
     }
     catch(err){
-        message.innerHTML = err.message
+        message.innerHTML = `Output = ${err.message}`
     }
 
 }
