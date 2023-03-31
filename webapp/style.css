@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-image: linear-gradient(to right top, #9945ff, #8966ff, #7e7eff, #7c92ff, #84a3fc, #6ab2ff, #54beff, #4acaff, #00d8fd, #00e3ea, #00ecc5, #14f195);
+}
+.heading
+{   
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #fff;
+    position: relative;
+    align-items: center;
+}
+.inputBox
+{
+    position: relative;
+    width: 250px;
+}
+.inputBox input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-image: linear-gradient(to right top, #9945ff, #8966ff, #7e7eff, #7c92ff, #84a3fc, #6ab2ff, #54beff, #4acaff, #00d8fd, #00e3ea, #00ecc5, #14f195);
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: .5s;
+}
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 4px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(248, 242, 242, 0.959);
+    text-transform: uppercase;
+
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: .65em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: .2em;
+
+}
+.inputBox input:valid,
+.inputBox input:focus
+{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span
+{ 
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+}
+.submitButton
+{   
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #00dfc4;
+    position: relative;
+    width: 125px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+.submitButton:focus{
+    color: #1d2b3a
+}
+.result{
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 25px;
+    align-items: center;
+    display: inline-block;
+    width: fit-content;
+}
+.optionTag{
+    width: 150px;
+    border-color: #fff;
+    border-radius: 5px;
+    color: #00dfc4;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+.optionLabel{
+    margin-top: 50px;
+    margin-bottom: -15px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;  
+}
