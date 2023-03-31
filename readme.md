@@ -1,4 +1,4 @@
-Use this link to access the airdrop website : 
+Use this link to access the airdrop website : https://sol-airdrop-webapp.vercel.app/
 
 Through this you can actually airdrop yourself Testnet/Devnet solana.
 
